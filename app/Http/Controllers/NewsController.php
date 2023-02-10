@@ -19,7 +19,9 @@ class NewsController extends Controller
             'title' => $request->input('title'),
             'date' => $request->input('date'),
             'body' => $request->input('body'),
-            'url' => $request->input('url')
+            'url' => $request->input('url'),
+            'site' => $request->input('site'),
+            'companies' => $request->input('companies', [])
         ]);
     }
 }
