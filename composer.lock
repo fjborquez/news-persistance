@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "534c610c8251b615c306ebe624a9455f",
+    "content-hash": "49ed10e9577132235f9f8324dc2808f9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1428,6 +1428,72 @@
                 "source": "https://github.com/hollodotme/fast-cgi-client/tree/v3.1.7"
             },
             "time": "2021-12-07T10:10:20+00:00"
+        },
+        {
+            "name": "kitar/laravel-dynamodb",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kitar/laravel-dynamodb.git",
+                "reference": "83dfe30fb96b05898f15a3758ff67fb14f7fdb87"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kitar/laravel-dynamodb/zipball/83dfe30fb96b05898f15a3758ff67fb14f7fdb87",
+                "reference": "83dfe30fb96b05898f15a3758ff67fb14f7fdb87",
+                "shasum": ""
+            },
+            "require": {
+                "aws/aws-sdk-php": "^3.0",
+                "illuminate/container": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/database": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/hashing": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/support": "^6.0|^7.0|^8.0|^9.0",
+                "php": "^7.3|^7.4|^8.0|^8.1|^8.2"
+            },
+            "require-dev": {
+                "illuminate/auth": "^6.0|^7.0|^8.0|^9.0",
+                "mockery/mockery": "^1.3",
+                "phpunit/phpunit": "^8.0|^9.0",
+                "symfony/var-dumper": "^5.0",
+                "vlucas/phpdotenv": "^4.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Kitar\\Dynamodb\\DynamodbServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Kitar\\Dynamodb\\": "src/Kitar/Dynamodb/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Satoshi Kita"
+                }
+            ],
+            "description": "A DynamoDB based Eloquent model and Query builder for Laravel.",
+            "homepage": "https://github.com/kitar/laravel-dynamodb",
+            "keywords": [
+                "auth",
+                "database",
+                "dynamodb",
+                "laravel",
+                "model"
+            ],
+            "support": {
+                "issues": "https://github.com/kitar/laravel-dynamodb/issues",
+                "source": "https://github.com/kitar/laravel-dynamodb/tree/v1.1.0"
+            },
+            "time": "2022-12-23T05:53:14+00:00"
         },
         {
             "name": "laravel/framework",
