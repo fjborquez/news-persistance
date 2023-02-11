@@ -7,6 +7,18 @@ use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
+    public function all(Request $request)
+    {
+        $date_filter = $request->date;
+
+        if (empty($date_filter))
+        {
+            return News::scan();
+        }
+
+        return News::all()->whereBetween('created_at', [$date_filter . ' 00:00:00', $date_filter . ' 23:59:59']);
+    }
+
     public function get($id)
     {
         return News::find((int)$id);

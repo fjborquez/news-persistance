@@ -21,11 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/company/{id}', [CompaniesController::class, 'get']);
-Route::post('/company', [CompaniesController::class, 'post']);
-
+Route::get('/news', [NewsController::class, 'all']);
 Route::get('/news/{id}', [NewsController::class, 'get']);
 Route::post('/news', [NewsController::class, 'post']);
-
-Route::get('/site/{id}', [SitesController::class, 'get']);
-Route::post('/site', [SitesController::class, 'post']);
