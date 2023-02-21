@@ -1,8 +1,6 @@
 <?php
 
-use App\Http\Controllers\CompaniesController;
 use App\Http\Controllers\NewsController;
-use App\Http\Controllers\SitesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
