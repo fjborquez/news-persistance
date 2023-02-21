@@ -9,7 +9,14 @@ class News extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id', 'title', 'date', 'body', 'url', 'site', 'companies'];
+    protected $fillable = ['title', 'date', 'body', 'url', 'site', 'companies'];
     protected $primaryKey = 'id';
     protected $table = 'news';
+
+    public static function find($id)
+    {
+        return parent::find([
+            'id' => (int)$id
+        ]);
+    }
 }

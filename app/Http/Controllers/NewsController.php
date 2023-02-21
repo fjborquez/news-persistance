@@ -21,7 +21,7 @@ class NewsController extends Controller
 
     public function get($id)
     {
-        return News::find((int)$id);
+        return News::find($id);
     }
 
     public function post(Request $request)
@@ -35,7 +35,6 @@ class NewsController extends Controller
         }
 
         return News::create([
-            'id' => (int)$request->input('id'),
             'title' => $request->input('title'),
             'date' => $request->input('date'),
             'body' => $request->input('body'),
