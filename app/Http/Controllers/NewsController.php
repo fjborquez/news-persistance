@@ -26,6 +26,14 @@ class NewsController extends Controller
 
     public function post(Request $request)
     {
+        $exists = News::all()->where('title', $request->input('title'))
+                    ->where('date', $request->input('date'))->count() > 0;
+
+        if ($exists)
+        {
+            abort(500);
+        }
+
         return News::create([
             'id' => (int)$request->input('id'),
             'title' => $request->input('title'),
