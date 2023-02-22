@@ -35,6 +35,7 @@ class NewsController extends Controller
         }
 
         return News::create([
+            'id' => (int)date('YmdHisu'),
             'title' => $request->input('title'),
             'date' => $request->input('date'),
             'body' => $request->input('body'),

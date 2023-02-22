@@ -9,7 +9,7 @@ class News extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'date', 'body', 'url', 'site', 'companies'];
+    protected $fillable = ['id', 'title', 'date', 'body', 'url', 'site', 'companies'];
     protected $primaryKey = 'id';
     protected $table = 'news';
 
